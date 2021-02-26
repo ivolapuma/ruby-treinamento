@@ -1,0 +1,23 @@
+Parte 1:
+
+Considere os métodos (as funções) escritos nos exercícios anteriores:
+
+Os métodos que calculam:
+
+- o diâmetro de um círculo é 2x o seu raio
+- o comprimento de um círculo é seu diâmetro vezes o valor da constante matemática PI (3.1415...)
+- a área de um círculo é seu raio ao quadrado vezes o valor da constante matemática PI (3.1415...)
+
+Escreva um programa que use esses métodos, porém, de tal forma que o valor do raio do círculo seja perguntado ao usuário.
+
+
+Parte 2:
+
+Considere os métodos escritos no exemplo sobre o cálculo de dias de vida e batimentos cardíacos:
+
+Escreva um programa que pergunte o nome e a idade do usuário e, usando os métodos criados naquele exemplo,
+exiba a quantidade de dias vividos e a quantidade de batimetos cardíacos (uma estimativa, considere que a 
+média seja 80 batimentos por minuto) que a pessoa já teve.
+
+
+Para cada parte, escreva códigos que testem os programas escritos.
