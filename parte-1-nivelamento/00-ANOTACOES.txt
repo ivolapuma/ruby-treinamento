@@ -1,0 +1,104 @@
+Ruby
+
+Ruby é uma linguagem dinâmica, orientada a objetos e que
+possui algumas características funcionais. Seu criador, Yukihiro
+Matsumoto, queria uma linguagem que juntasse programação
+funcional e imperativa, mas acima de tudo que fosse uma
+linguagem legível. Esta é uma das grandes vantagens da linguagem,
+ser extremamente legível.
+
+1.1 QUANDO? ONDE? POR QUÊ?
+
+A  linguagem  Ruby  foi  criada  por  Yukihiro Matsumoto,  mais
+conhecido como Matz, no ano de 1995 no  Japão. Ela  tinha como
+objetivo  ser  uma  linguagem  mais  legível  e  agradável  de  se
+programar.
+Mas,  além  das  características  orientada  a  objetos,  Ruby
+também  foi  criada  para  possuir  um  forte  quê  de  linguagem
+funcional, tendo recursos poderosos e essenciais desse paradigma,
+como  lambdas  e closures.  Ela foi  inspirada  em  outras  linguagens
+como  Perl,  Smalltalk  e  Lisp,  e  hoje  está  entre  as  linguagens mais
+usadas,  muito  em  função  da  disseminação  do  seu  principal
+framework MVC, o Ruby on Rails (http://rubyonrails.org).
+Algumas  características  do  Ruby  devem  ser  fixadas  desde  o
+começo  dos  estudos,  pois  vão  facilitar  bastante  nossa  curva  de
+aprendizado, como a  tipagem forte e dinâmica, além do fato de a
+linguagem  ser  interpretada.  Fique  tranquilo  caso  você  ainda  não
+tenha escutado falar sobre alguns desses conceitos.
+
+
+1 --> INTRODUÇÃO
+
+Instalação do Ruby.
+
+Apresentação do IRB (Interactive Ruby Shell)
+
+Apresentação do interpretador Ruby 'ruby -v' para ver a versão.
+
+Arquivos-fonte devem ser salvos com extensão .rb
+
+
+2 --> OPERADORES
+
++  : adição
+-  : subtração
+*  : multiplicação
+/  : divisão
+** : potência
+%  : modulo divisão
+
+2.1 pontos flutuantes
+
+WHY??!!! It’s so simple… in what world 2.0–1.1 would be different than 0.9 and how this thing got implemented in virtually every computer known?!
+
+The reason is: should not matter! Floating point numbers, kindly called “Float” (homonym to its Ruby representation) imposes a limit for any number that could be really big or even infinite, but you don’t care so much about precision. For your use, doesn’t matter if the result is 0.8999999999999999 or 0.9. Both will get you happy and thanking this precious and big calculator you call “computer”.
+
+
+3 --> VARIÁVEIS
+
+Um dos conceitos básicos em linguagens de programação é a
+declaração de variáveis, que é apenas uma associação entre um
+nome e um valor. Em Ruby, basta definirmos o nome da variável e
+atribuir um valor usando o sinal = (igual).
+
+
+3. Inferência de tipos
+
+Ao contrário de outras linguagens, como C, em que é
+necessário declararmos o tipo da variável, na linguagem Ruby não
+precisamos fazer isso, pois o interpretador infere o tipo da variável
+automaticamente durante a execução do código. Esta característica
+é conhecida como inferência de tipos.
+
+<nome_variavel>.class --> retorna o tipo da variável
+
+
+3. String, aspas simples e aspas duplas (com interpolacao)
+
+Existe muita discussão sobre qual tipo de declaração de
+ String devemos utilizar, com o argumento de que as declarações
+com aspas simples são mais rápidas do que as declarações com
+aspas duplas.
+As  String  declaradas com aspas simples podem ser
+sutilmente mais rápidas que as declaradas com aspas duplas,
+porque o analisador léxico da linguagem Ruby não tem de checar
+se existem marcadores de interpolação  #{} . Este número pode
+variar de interpretador para interpretador, e vale ressaltar que este
+tempo seria menos durante o parser do código, e não durante a sua
+execução.
+A diferença é tão insignificante que não vale a pena perdermos
+tempo com esse tipo de comparação. Eu particularmente prefiro
+declará-las sempre com aspas duplas, porque, se em determinado
+momento eu precisar interpolar o valor de alguma variável dentro
+desta String , ela já foi criada de uma maneira que não preciso
+alterá-la.
+Existe diferença de performance entre String com
+aspas simples e duplas?
+A única preocupação que devemos ter é com o que vamos
+interpolar dentro de uma String . Por exemplo:
+puts 'mensagem' # => mensagem
+puts "#{sleep 1}mensagem" # => mensagem
+A String declarada com aspas duplas interpola a chamada de
+um método da classe  Kernel  que interrompe a execução do
+código por 1 segundo. Ou seja, o tempo para impressão da
+segunda String mensagem será de pelo menos 1 segundo.
