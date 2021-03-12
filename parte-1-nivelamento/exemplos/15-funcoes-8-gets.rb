@@ -33,7 +33,7 @@ imc = calcula_imc peso, altura
 puts nome + ", seu IMC eh igual a " + imc
 
 # Dois problemas:
-# 1) in `calcula_imc': undefined method `**' for "1.66\n":String (NoMethodError)
+# 1) in 'calcula_imc': undefined method '**' for "1.66\n":String (NoMethodError)
 # 2) a quebra de linha ao exibir o que foi digitado via gets
 
 # gets retorna uma string e a operaçao realizada no metodo calcula_imc espera que os valores sejam numeros
@@ -42,6 +42,7 @@ puts nome + ", seu IMC eh igual a " + imc
 
 # assim como usamos o metodo to_s() para converter um valor numerico para string (exemplos anteriores)
 # teremos aqui que usar alguma coisa para converter a string para numero
+
 # no Ruby, existe o metodo to_i(), que pode ser acessado a partir de uma variavel string
 
 # vamos ajustar o programa para converter os valores lidos de string para numero...
@@ -63,8 +64,8 @@ puts "E sua altura?"
 print ": "
 altura = gets
 
-# imc = calcula_imc peso.to_i, altura.to_i  # 1o com essa linha descomentada
-imc = calcula_imc peso.to_i, altura.to_f  # depois de ver o problem com to_i(), colocar essa linha
+imc = calcula_imc peso.to_i, altura.to_i  # 1o com essa linha descomentada
+#imc = calcula_imc peso.to_i, altura.to_f  # depois de ver o problem com to_i(), colocar essa linha
 
 puts nome + ", seu IMC eh igual a " + imc.to_s
 
@@ -83,7 +84,7 @@ puts altura.to_f  # converte de string para float
 
 
 # muito bem! o cálculo está correto agora, mas ainda tem algo estranho...
-# # (esperar para ver se alguém percebe o problema)
+# (esperar para ver se alguém percebe o problema)
 
 # tá quebrando linha quando exibe o 'nome' concatenado com outra string nas linhas com 'puts', pq?
 

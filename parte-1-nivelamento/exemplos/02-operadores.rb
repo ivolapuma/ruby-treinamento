@@ -41,6 +41,24 @@ puts 5 / 2
 puts 5 % 2
 puts 5.0 % 2.0
 
+
+#
+# divisao por zero...
+#
+puts 10 / 1  # nada de novo sob o sol
+puts 10 / 0  # pau! tomamos um ZeroDivisionError
+# mas...
+puts 10 / 0.0   # Infinity --> qualquer numero que o Ruby sabe que existe, mas nao eh capaz de representá-lo
+puts -10 / 0.0  # -Infinity
+# e...
+puts 0 / 0.0  # NaN : Not a Number --> quando o Ruby nem sabe como começar o cálculo, vai retornar um NaN
+
+
+# pequeno spoiler
+puts Float::INFINITY                    # Infinity
+puts Float::INFINITY / Float::INFINITY  # NaN
+
+
 #
 # um pequeno bônus...
 #
@@ -66,22 +84,6 @@ float.class
 float.zero?
 # => true
 
-
-#
-# divisao por zero...
-#
-puts 10 / 1  # nada de novo sob o sol
-puts 10 / 0  # pau! tomamos um ZeroDivisionError
-# mas...
-puts 10 / 0.0   # Infinity --> qualquer numero que o Ruby sabe que existe, mas nao eh capaz de representá-lo
-puts -10 / 0.0  # -Infinity
-# e...
-puts 0 / 0.0  # NaN : Not a Number --> quando o Ruby nem sabe como começar o cálculo, vai retornar um NaN
-
-
-# pequeno spoiler
-puts Float::INFINITY                    # Infinity
-puts Float::INFINITY / Float::INFINITY  # NaN
 
 
 #

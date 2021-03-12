@@ -4,7 +4,7 @@
 
 puts "este texto eh uma string"
 puts "uma string eh tudo que esta entre aspas"
-puts 'entre aspas duplas ou simples, com essa'
+puts 'entre aspas duplas ou simples, como essa'
 
 puts "caixa d'agua"
 puts 'vou escrever essa "palavra" entre aspas duplas'
