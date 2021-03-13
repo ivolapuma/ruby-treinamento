@@ -80,3 +80,17 @@ end
 
 # o que esta acontecendo em cada uma das formas?
 # (esperar alguem se manifestar)
+
+
+# e tbm pode usar 'else' ao final dos 'elsif's...
+
+numero = 50
+if numero == 10
+    puts "Numero eh igual a 10!"
+elsif numero == 20
+    puts "Numero eh igual a 20!"
+elsif numero == 30
+    puts "Numero eh igual a 30!"
+else
+    puts "Numero NAO EH 10, nem 20 e nem 30!"
+end
